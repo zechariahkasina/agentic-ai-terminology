@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI Learning Path Chart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            color: #636e72;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .learning-path {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .level {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .level:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .beginner {
+            border-color: #00b894;
+            background: linear-gradient(145deg, #d1f2eb, #a3e4d7);
+        }
+        .intermediate {
+            border-color: #fdcb6e;
+            background: linear-gradient(145deg, #fef9e7, #fcf4dd);
+        }
+        .advanced {
+            border-color: #e17055;
+            background: linear-gradient(145deg, #fdf2ef, #fae5d3);
+        }
+        .level-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .level-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .level-subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        .beginner .level-title { color: #00b894; }
+        .intermediate .level-title { color: #e17055; }
+        .advanced .level-title { color: #d63031; }
+        .concept-list {
+            list-style: none;
+            padding: 0;
+        }
+        .concept-item {
+            background: rgba(255,255,255,0.7);
+            margin-bottom: 8px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            border-left: 4px solid;
+            transition: all 0.2s ease;
+        }
+        .concept-item:hover {
+            background: rgba(255,255,255,0.9);
+            transform: translateX(5px);
+        }
+        .beginner .concept-item { border-left-color: #00b894; }
+        .intermediate .concept-item { border-left-color: #fdcb6e; }
+        .advanced .concept-item { border-left-color: #e17055; }
+        .progression-arrow {
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #74b9ff;
+            z-index: 10;
+        }
+        .timeline {
+            margin: 50px 0;
+            position: relative;
+        }
+        .timeline-title {
+            text-align: center;
+            font-size: 24px;
+            color: #2d3436;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .timeline-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00b894, #fdcb6e, #e17055);
+            border-radius: 2px;
+            z-index: 1;
+        }
+        .timeline-step {
+            background: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            border: 4px solid;
+            z-index: 2;
+            position: relative;
+        }
+        .timeline-step.step1 { border-color: #00b894; color: #00b894; }
+        .timeline-step.step2 { border-color: #fdcb6e; color: #e17055; }
+        .timeline-step.step3 { border-color: #e17055; color: #d63031; }
+        .skills-matrix {
+            margin-top: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+        }
+        .matrix-title {
+            text-align: center;
+            font-size: 20px;
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+        }
+        .matrix-header {
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            background: #ddd;
+            border-radius: 5px;
+        }
+        .matrix-row {
+            display: contents;
+        }
+        .matrix-cell {
+            padding: 8px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .skill-name {
+            text-align: left !important;
+            font-weight: 500;
+        }
+        .skill-level {
+            font-weight: bold;
+            color: white;
+        }
+        .level-beginner { background: #00b894; }
+        .level-intermediate { background: #fdcb6e; color: #2d3436 !important; }
+        .level-advanced { background: #e17055; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Agentic AI Learning Path</h1>
+        <p class="subtitle">Your roadmap from AI curious to AI expert</p>
+        
+        <div class="learning-path">
+            <div class="level beginner">
+                <div class="level-header">
+                    <div class="level-title">🌱 Beginner</div>
+                    <div class="level-subtitle">Foundation Concepts</div>
+                </div>
+                <ul class="concept-list">
+                    <li class="concept-item">AI Agent</li>
+                    <li class="concept-item">Large Language Model (LLM)</li>
+                    <li class="concept-item">Prompt Engineering</li>
+                    <li class="concept-item">Tool Calling</li>
+                    <li class="concept-item">Amazon Bedrock</li>
+                    <li class="concept-item">API Basics</li>
+                    <li class="concept-item">AI Ethics</li>
+                    <li class="concept-item">System Prompts</li>
+                </ul>
+                <div class="progression-arrow">→</div>
+            </div>
+            
+            <div class="level intermediate">
+                <div class="level-header">
+                    <div class="level-title">🚀 Intermediate</div>
+                    <div class="level-subtitle">Implementation Skills</div>
+                </div>
+                <ul class="concept-list">
+                    <li class="concept-item">RAG (Retrieval-Augmented Generation)</li>
+                    <li class="concept-item">Multi-Agent Systems</li>
+                    <li class="concept-item">Agent Orchestration</li>
+                    <li class="concept-item">Vector Databases</li>
+                    <li class="concept-item">Fine-Tuning</li>
+                    <li class="concept-item">IAM & Security</li>
+                    <li class="concept-item">Serverless Deployment</li>
+                    <li class="concept-item">Model Context Protocol</li>
+                </ul>
+                <div class="progression-arrow">→</div>
+            </div>
+            
+            <div class="level advanced">
+                <div class="level-header">
+                    <div class="level-title">🎯 Advanced</div>
+                    <div class="level-subtitle">Expert Techniques</div>
+                </div>
+                <ul class="concept-list">
+                    <li class="concept-item">Constitutional AI</li>
+                    <li class="concept-item">Mixture of Experts</li>
+                    <li class="concept-item">Tree of Thoughts</li>
+                    <li class="concept-item">Agent Memory Systems</li>
+                    <li class="concept-item">Model Alignment</li>
+                    <li class="concept-item">AI Governance</li>
+                    <li class="concept-item">Observability</li>
+                    <li class="concept-item">Enterprise Architecture</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-title">Typical Learning Timeline</div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-step step1">
+                    Weeks<br>1-4
+                </div>
+                <div class="timeline-step step2">
+                    Months<br>2-6
+                </div>
+                <div class="timeline-step step3">
+                    Months<br>6-12+
+                </div>
+            </div>
+        </div>
+        
+        <div class="skills-matrix">
+            <div class="matrix-title">Skills Assessment Matrix</div>
+            <div class="matrix-grid">
+                <div class="matrix-header">Skill Area</div>
+                <div class="matrix-header">Beginner</div>
+                <div class="matrix-header">Intermediate</div>
+                <div class="matrix-header">Advanced</div>
+                
+                <div class="matrix-row">
+                    <div class="matrix-cell skill-name">Understanding AI Concepts</div>
+                    <div class="matrix-cell skill-level level-beginner">Basic</div>
+                    <div class="matrix-cell skill-level level-intermediate">Applied</div>
+                    <div class="matrix-cell skill-level level-advanced">Expert</div>
+                </div>
+                
+                <div class="matrix-row">
+                    <div class="matrix-cell skill-name">Technical Implementation</div>
+                    <div class="matrix-cell skill-level level-beginner">Simple</div>
+                    <div class="matrix-cell skill-level level-intermediate">Complex</div>
+                    <div class="matrix-cell skill-level level-advanced">Architect</div>
+                </div>
+                
+                <div class="matrix-row">
+                    <div class="matrix-cell skill-name">Business Application</div>
+                    <div class="matrix-cell skill-level level-beginner">Aware</div>
+                    <div class="matrix-cell skill-level level-intermediate">Strategic</div>
+                    <div class="matrix-cell skill-level level-advanced">Leader</div>
+                </div>
+                
+                <div class="matrix-row">
+                    <div class="matrix-cell skill-name">Problem Solving</div>
+                    <div class="matrix-cell skill-level level-beginner">Guided</div>
+                    <div class="matrix-cell skill-level level-intermediate">Independent</div>
+                    <div class="matrix-cell skill-level level-advanced">Innovative</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

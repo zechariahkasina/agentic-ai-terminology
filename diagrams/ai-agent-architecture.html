@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>AI Agent Architecture Diagram - Interactive Visual Guide | Zechariah Kasina</title>
+    <meta name="title" content="AI Agent Architecture Diagram - Interactive Visual Guide">
+    <meta name="description" content="Comprehensive visual diagram showing AI agent architecture components, data flow, and processing workflow. Learn how AI agents process inputs, make decisions, and generate outputs.">
+    <meta name="keywords" content="AI agent architecture, AI system design, agent components, AI workflow, machine learning architecture, AI agent diagram, autonomous AI systems, AI processing flow">
+    <meta name="author" content="Zechariah Kasina">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://your-username.github.io/agentic-ai-terminology/diagrams/ai-agent-architecture.html">
+    <meta property="og:title" content="AI Agent Architecture Diagram - Interactive Visual Guide">
+    <meta property="og:description" content="Explore AI agent architecture with interactive diagrams showing component relationships and data flow patterns.">
+    <meta property="og:image" content="https://your-username.github.io/agentic-ai-terminology/assets/ai-architecture-preview.png">
+    <meta property="og:site_name" content="Agentic AI Terminology Guide">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-username.github.io/agentic-ai-terminology/diagrams/ai-agent-architecture.html">
+    <meta property="twitter:title" content="AI Agent Architecture Diagram - Interactive Visual Guide">
+    <meta property="twitter:description" content="Explore AI agent architecture with interactive diagrams showing component relationships and data flow patterns.">
+    <meta property="twitter:image" content="https://your-username.github.io/agentic-ai-terminology/assets/ai-architecture-preview.png">
+    <meta property="twitter:creator" content="@ZechariahKasina">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://your-username.github.io/agentic-ai-terminology/diagrams/ai-agent-architecture.html">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI Agent Architecture Diagram - Interactive Visual Guide",
+        "description": "Comprehensive visual diagram showing AI agent architecture components, data flow, and processing workflow",
+        "author": {
+            "@type": "Person",
+            "name": "Zechariah Kasina"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Zechariah Kasina"
+        },
+        "datePublished": "2025-01-02",
+        "dateModified": "2025-01-02",
+        "inLanguage": "en-US",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Agentic AI Terminology Guide",
+            "url": "https://your-username.github.io/agentic-ai-terminology/"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "AI Agent Architecture",
+            "description": "System design and component structure of artificial intelligence agents"
+        }
+    }
+    </script>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --card-border: rgba(255, 255, 255, 0.2);
+            --text-primary: #2d3436;
+            --text-secondary: #636e72;
+            --shadow-light: 0 8px 32px rgba(31, 38, 135, 0.37);
+            --shadow-hover: 0 15px 35px rgba(31, 38, 135, 0.5);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .ai-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+        }
+
+        .ai-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--card-border);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5)); }
+            to { filter: drop-shadow(0 0 30px rgba(118, 75, 162, 0.8)); }
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--accent-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--shadow-light);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            text-decoration: none;
+            color: white;
+        }
+        .architecture {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin: 40px 0;
+        }
+        .component {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 2px solid var(--card-border);
+            transition: var(--transition);
+            position: relative;
+            box-shadow: var(--shadow-light);
+        }
+        .component:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+        .component h3 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .component p {
+            color: #6c757d;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .core-agent {
+            background: var(--accent-gradient);
+            color: white;
+            grid-column: 2;
+            padding: 32px;
+            font-size: 16px;
+            box-shadow: var(--shadow-hover);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .core-agent h3 {
+            color: white;
+            font-size: 26px;
+            margin-bottom: 16px;
+        }
+        .input-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .output-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .arrow {
+            position: absolute;
+            font-size: 24px;
+            color: #495057;
+        }
+        .arrow-right {
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .arrow-left {
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .flow-diagram {
+            margin: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .flow-step {
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            position: relative;
+            min-width: 140px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+        }
+        .flow-step:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+        .flow-arrow {
+            font-size: 20px;
+            color: #495057;
+        }
+        .legend {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .legend h4 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .input-color { background: linear-gradient(145deg, #f8f9fa, #e9ecef); }
+        .core-color { background: linear-gradient(145deg, #4dabf7, #339af0); }
+        .output-color { background: linear-gradient(145deg, #f8f9fa, #e9ecef); }
+        .process-color { background: linear-gradient(145deg, #51cf66, #40c057); }
+    </style>
+</head>
+<body>
+    <div class="ai-background" id="aiBackground"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1 class="title">🏗️ AI Agent Architecture</h1>
+            <p class="subtitle">Understanding how AI agents are structured and operate</p>
+            <a href="../index.html" class="back-link">← Back to Terminology Guide</a>
+        </div>
+        
+        <div class="architecture">
+            <div class="input-section">
+                <div class="component">
+                    <h3>User Input</h3>
+                    <p>Natural language queries, commands, or requests</p>
+                    <div class="arrow arrow-right">→</div>
+                </div>
+                <div class="component">
+                    <h3>Context & Memory</h3>
+                    <p>Previous conversations, learned preferences, session state</p>
+                    <div class="arrow arrow-right">→</div>
+                </div>
+                <div class="component">
+                    <h3>External Data</h3>
+                    <p>APIs, databases, documents, real-time information</p>
+                    <div class="arrow arrow-right">→</div>
+                </div>
+            </div>
+            
+            <div class="component core-agent">
+                <h3>AI Agent Core</h3>
+                <p><strong>Large Language Model</strong><br>
+                Reasoning • Planning • Decision Making<br><br>
+                <strong>Key Components:</strong><br>
+                • Prompt Processing<br>
+                • Tool Selection<br>
+                • Response Generation<br>
+                • Error Handling</p>
+            </div>
+            
+            <div class="output-section">
+                <div class="component">
+                    <div class="arrow arrow-left">←</div>
+                    <h3>Actions</h3>
+                    <p>API calls, file operations, system commands</p>
+                </div>
+                <div class="component">
+                    <div class="arrow arrow-left">←</div>
+                    <h3>Responses</h3>
+                    <p>Natural language answers, explanations, recommendations</p>
+                </div>
+                <div class="component">
+                    <div class="arrow arrow-left">←</div>
+                    <h3>Tool Outputs</h3>
+                    <p>Processed data, generated content, analysis results</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; color: #495057; margin: 40px 0 20px 0;">Agent Processing Flow</h2>
+        <div class="flow-diagram">
+            <div class="flow-step">1. Receive Input</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">2. Understand Intent</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">3. Plan Actions</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">4. Execute Tools</div>
+            <div class="flow-arrow">→</div>
+            <div class="flow-step">5. Generate Response</div>
+        </div>
+        
+        <div class="legend">
+            <h4>Component Legend</h4>
+            <div class="legend-item">
+                <div class="legend-color input-color"></div>
+                <span>Input/Output Components - Data sources and destinations</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color core-color"></div>
+                <span>Core Agent - Central processing and decision-making unit</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color process-color"></div>
+                <span>Processing Steps - Sequential workflow stages</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Create animated AI background
+        function createAIBackground() {
+            const background = document.getElementById('aiBackground');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'ai-particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                background.appendChild(particle);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', createAIBackground);
+    </script>
+</body>
+</html>

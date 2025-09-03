@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Main Page -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Interactive Cards Interface -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/index.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Documentation -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/README.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Deployment Guide -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/DEPLOYMENT.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- AI Agent Architecture Diagram -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/ai-agent-architecture.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Learning Path Chart -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/learning-path-chart.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- AWS AI Ecosystem Diagram -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/aws-ai-ecosystem.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- AI Reasoning Patterns Diagram -->
+    <url>
+        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/ai-reasoning-patterns.html</loc>
+        <lastmod>2025-01-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+</urlset>

@@ -1,0 +1,35 @@
+# Robots.txt for Agentic AI Terminology Guide
+# Author: Zechariah Kasina
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://your-username.github.io/agentic-ai-terminology/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow specific paths (if any)
+# Disallow: /private/
+# Disallow: /temp/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (optional)
+User-agent: BadBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /

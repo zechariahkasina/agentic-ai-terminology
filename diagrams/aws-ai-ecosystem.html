@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS AI Services Ecosystem</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .title {
+            text-align: center;
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .subtitle {
+            text-align: center;
+            color: #636e72;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .ecosystem {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .service-category {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            border-top: 4px solid;
+            transition: all 0.3s ease;
+        }
+        .service-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .foundation { border-top-color: #ff6b6b; }
+        .intelligence { border-top-color: #4ecdc4; }
+        .development { border-top-color: #45b7d1; }
+        .infrastructure { border-top-color: #96ceb4; }
+        .category-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .foundation .category-title { color: #ff6b6b; }
+        .intelligence .category-title { color: #4ecdc4; }
+        .development .category-title { color: #45b7d1; }
+        .infrastructure .category-title { color: #96ceb4; }
+        .service-list {
+            list-style: none;
+            padding: 0;
+        }
+        .service-item {
+            background: white;
+            margin-bottom: 8px;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            border-left: 3px solid;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .service-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .foundation .service-item { border-left-color: #ff6b6b; }
+        .intelligence .service-item { border-left-color: #4ecdc4; }
+        .development .service-item { border-left-color: #45b7d1; }
+        .infrastructure .service-item { border-left-color: #96ceb4; }
+        .integration-flow {
+            margin: 40px 0;
+            background: linear-gradient(145deg, #f1f2f6, #dfe4ea);
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .flow-title {
+            text-align: center;
+            font-size: 24px;
+            color: #2d3436;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .flow-diagram {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            align-items: center;
+        }
+        .flow-step {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .flow-step:hover {
+            transform: scale(1.05);
+        }
+        .step1 { border-color: #ff6b6b; }
+        .step2 { border-color: #4ecdc4; }
+        .step3 { border-color: #45b7d1; }
+        .step4 { border-color: #96ceb4; }
+        .step5 { border-color: #feca57; }
+        .step-number {
+            background: #2d3436;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0 auto 10px auto;
+        }
+        .step-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .step-service {
+            font-size: 12px;
+            color: #636e72;
+        }
+        .flow-arrow {
+            text-align: center;
+            font-size: 20px;
+            color: #636e72;
+        }
+        .use-cases {
+            margin-top: 40px;
+        }
+        .use-cases-title {
+            text-align: center;
+            font-size: 24px;
+            color: #2d3436;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .use-case {
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        .use-case:hover {
+            border-color: #ff6b6b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .use-case-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+        .use-case-description {
+            font-size: 14px;
+            color: #636e72;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .use-case-services {
+            font-size: 12px;
+            color: #ff6b6b;
+            font-weight: 500;
+        }
+        .legend {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .legend-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2d3436;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .color-foundation { background: #ff6b6b; }
+        .color-intelligence { background: #4ecdc4; }
+        .color-development { background: #45b7d1; }
+        .color-infrastructure { background: #96ceb4; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AWS AI Services Ecosystem</h1>
+        <p class="subtitle">Complete toolkit for building intelligent AI agents</p>
+        
+        <div class="ecosystem">
+            <div class="service-category foundation">
+                <div class="category-title">🧠 Foundation Models</div>
+                <ul class="service-list">
+                    <li class="service-item">Amazon Bedrock</li>
+                    <li class="service-item">Bedrock Agents</li>
+                    <li class="service-item">Bedrock AgentCore</li>
+                    <li class="service-item">Bedrock Knowledge Bases</li>
+                    <li class="service-item">Bedrock Guardrails</li>
+                    <li class="service-item">SageMaker JumpStart</li>
+                </ul>
+            </div>
+            
+            <div class="service-category intelligence">
+                <div class="category-title">🎯 AI Intelligence</div>
+                <ul class="service-list">
+                    <li class="service-item">Amazon Comprehend</li>
+                    <li class="service-item">Amazon Rekognition</li>
+                    <li class="service-item">Amazon Textract</li>
+                    <li class="service-item">Amazon Transcribe</li>
+                    <li class="service-item">Amazon Polly</li>
+                    <li class="service-item">Amazon Kendra</li>
+                </ul>
+            </div>
+            
+            <div class="service-category development">
+                <div class="category-title">⚡ Development Tools</div>
+                <ul class="service-list">
+                    <li class="service-item">Amazon SageMaker</li>
+                    <li class="service-item">CodeWhisperer</li>
+                    <li class="service-item">Amazon Lex</li>
+                    <li class="service-item">AWS SDK</li>
+                    <li class="service-item">CloudFormation</li>
+                    <li class="service-item">AWS CDK</li>
+                </ul>
+            </div>
+            
+            <div class="service-category infrastructure">
+                <div class="category-title">🏗️ Infrastructure</div>
+                <ul class="service-list">
+                    <li class="service-item">AWS Lambda</li>
+                    <li class="service-item">Amazon ECS</li>
+                    <li class="service-item">Amazon ECR</li>
+                    <li class="service-item">Amazon S3</li>
+                    <li class="service-item">Amazon RDS</li>
+                    <li class="service-item">Amazon OpenSearch</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="integration-flow">
+            <div class="flow-title">Typical AI Agent Implementation Flow</div>
+            <div class="flow-diagram">
+                <div class="flow-step step1">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Foundation</div>
+                    <div class="step-service">Bedrock + Models</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step step2">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Intelligence</div>
+                    <div class="step-service">Comprehend + Kendra</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step step3">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Development</div>
+                    <div class="step-service">SageMaker + SDK</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step step4">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Deploy</div>
+                    <div class="step-service">Lambda + ECS</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step step5">
+                    <div class="step-number">5</div>
+                    <div class="step-title">Monitor</div>
+                    <div class="step-service">CloudWatch + X-Ray</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="use-cases">
+            <div class="use-cases-title">Common AI Agent Use Cases</div>
+            <div class="use-case-grid">
+                <div class="use-case">
+                    <div class="use-case-title">📞 Customer Service Agent</div>
+                    <div class="use-case-description">
+                        Intelligent chatbot that handles customer inquiries, processes requests, and escalates complex issues to humans.
+                    </div>
+                    <div class="use-case-services">
+                        Services: Bedrock + Lex + Comprehend + Kendra
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-title">📊 Business Intelligence Agent</div>
+                    <div class="use-case-description">
+                        Analyzes business data, generates reports, and provides insights through natural language queries.
+                    </div>
+                    <div class="use-case-services">
+                        Services: Bedrock + SageMaker + QuickSight + S3
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-title">📝 Document Processing Agent</div>
+                    <div class="use-case-description">
+                        Extracts information from documents, summarizes content, and organizes data automatically.
+                    </div>
+                    <div class="use-case-services">
+                        Services: Textract + Comprehend + Bedrock + S3
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-title">🔍 Research Assistant Agent</div>
+                    <div class="use-case-description">
+                        Searches through knowledge bases, synthesizes information, and provides comprehensive research summaries.
+                    </div>
+                    <div class="use-case-services">
+                        Services: Kendra + Bedrock + OpenSearch + Lambda
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-title">💻 Code Review Agent</div>
+                    <div class="use-case-description">
+                        Reviews code for bugs, suggests improvements, and ensures compliance with coding standards.
+                    </div>
+                    <div class="use-case-services">
+                        Services: CodeWhisperer + Bedrock + CodeCommit
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-title">🎥 Content Moderation Agent</div>
+                    <div class="use-case-description">
+                        Automatically reviews and moderates user-generated content for inappropriate material.
+                    </div>
+                    <div class="use-case-services">
+                        Services: Rekognition + Comprehend + Guardrails
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-title">Service Categories</div>
+            <div class="legend-grid">
+                <div class="legend-item">
+                    <div class="legend-color color-foundation"></div>
+                    <span>Foundation Models & Core AI</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-intelligence"></div>
+                    <span>Specialized AI Services</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-development"></div>
+                    <span>Development & Integration</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color color-infrastructure"></div>
+                    <span>Infrastructure & Deployment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

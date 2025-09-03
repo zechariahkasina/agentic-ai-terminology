@@ -1,0 +1,97 @@
+# GitHub Pages Configuration
+title: "Agentic AI Terminology Guide"
+description: "Comprehensive interactive guide to 80+ AI agent concepts, terms, and technologies. Learn about LLMs, RAG, multi-agent systems, AWS AI services, and advanced AI patterns."
+url: "https://your-username.github.io"
+baseurl: "/agentic-ai-terminology"
+
+# Author Information
+author:
+  name: "Zechariah Kasina"
+  email: "zechariah.kasina@example.com"
+  twitter: "ZechariahKasina"
+  github: "your-username"
+
+# SEO Settings
+lang: "en-US"
+timezone: "America/Los_Angeles"
+keywords: "AI agents, artificial intelligence, machine learning, LLM, RAG, multi-agent systems, AWS AI, Bedrock, prompt engineering, AI terminology"
+
+# Social Media
+social:
+  name: "Zechariah Kasina"
+  links:
+    - "https://twitter.com/ZechariahKasina"
+    - "https://github.com/your-username"
+    - "https://linkedin.com/in/zechariah-kasina"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# SEO Plugin Settings
+google_analytics: "G-XXXXXXXXXX"  # Replace with your Google Analytics ID
+google_site_verification: "your-verification-code"  # Replace with your verification code
+
+# Feed Settings
+feed:
+  excerpt_only: true
+
+# Sitemap Settings
+sitemap:
+  exclude:
+    - "/404.html"
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - "*.gem"
+  - "*.gemspec"
+
+# Include files
+include:
+  - _pages
+  - diagrams
+  - ".htaccess"
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+      author: "Zechariah Kasina"
+  - scope:
+      path: "diagrams"
+    values:
+      layout: "default"
+      author: "Zechariah Kasina"
+      category: "diagrams"
+
+# Performance Settings
+sass:
+  style: compressed
+
+# Security
+webrick:
+  headers:
+    X-Frame-Options: "SAMEORIGIN"
+    X-Content-Type-Options: "nosniff"
+    X-XSS-Protection: "1; mode=block"
