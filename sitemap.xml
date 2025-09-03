@@ -6,7 +6,7 @@
 
     <!-- Main Page -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
     <!-- Interactive Cards Interface -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/index.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/index.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -22,7 +22,7 @@
 
     <!-- Documentation -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/README.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/README.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
     <!-- Deployment Guide -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/DEPLOYMENT.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/DEPLOYMENT.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -38,7 +38,7 @@
 
     <!-- AI Agent Architecture Diagram -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/ai-agent-architecture.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/diagrams/ai-agent-architecture.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -46,7 +46,7 @@
 
     <!-- Learning Path Chart -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/learning-path-chart.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/diagrams/learning-path-chart.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -54,7 +54,7 @@
 
     <!-- AWS AI Ecosystem Diagram -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/aws-ai-ecosystem.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/diagrams/aws-ai-ecosystem.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -62,7 +62,7 @@
 
     <!-- AI Reasoning Patterns Diagram -->
     <url>
-        <loc>https://your-username.github.io/agentic-ai-terminology/diagrams/ai-reasoning-patterns.html</loc>
+        <loc>https://zechariahks.github.io/agentic-ai-terminology/diagrams/ai-reasoning-patterns.html</loc>
         <lastmod>2025-01-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>

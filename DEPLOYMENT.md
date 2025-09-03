@@ -8,7 +8,7 @@ This guide will help you deploy the Agentic AI Terminology Guide to GitHub Pages
 ```bash
 # Create a new repository on GitHub
 # Clone or upload this folder to your repository
-git clone https://github.com/YOUR-USERNAME/agentic-ai-terminology.git
+git clone https://github.com/zechariahks/agentic-ai-terminology.git
 cd agentic-ai-terminology
 
 # Add all files
@@ -28,7 +28,7 @@ git push origin main
 ### 3. Access Your Site
 Your site will be available at:
 ```
-https://YOUR-USERNAME.github.io/agentic-ai-terminology/
+https://zechariahks.github.io/agentic-ai-terminology/
 ```
 
 ## 📁 Project Structure
@@ -77,7 +77,7 @@ Edit `_config.yml`:
 ```yaml
 title: "Your Custom Title"
 description: "Your custom description"
-url: "https://your-username.github.io"
+url: "https://zechariahks.github.io"
 baseurl: "/your-repo-name"
 ```
 
