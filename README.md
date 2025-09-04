@@ -63,6 +63,18 @@ The agent's capability to make choices and take actions without human interventi
 ### **Agent Collaboration**
 The ability of multiple agents to work together, share information, and coordinate actions to solve problems that require diverse skills or perspectives.
 
+### **Agent-to-Agent (A2A) Protocol**
+An open standard that defines how AI agents can discover, communicate, and collaborate with each other across different platforms and implementations, enabling seamless inter-agent communication.
+
+### **Agents as Tools**
+An architectural pattern where specialized AI agents are wrapped as callable functions (tools) that can be used by other agents, creating a hierarchical structure with orchestrator agents coordinating specialized tool agents.
+
+### **Swarm Intelligence**
+A collaborative agent orchestration system where multiple agents work together as a team with shared context and working memory, enabling autonomous coordination, dynamic task distribution, and collective intelligence.
+
+### **Agent Swarm**
+A specific implementation of swarm intelligence where agents operate with self-organizing capabilities, tool-based coordination, and emergent intelligence through shared context and autonomous collaboration.
+
 ### **Feedback Loop**
 A mechanism where an agent learns from the results of its actions and adjusts future behavior accordingly, enabling continuous improvement.
 
@@ -114,6 +126,21 @@ The process of ensuring AI models behave in ways that are consistent with human 
 
 ### **Reinforcement Learning from Human Feedback (RLHF)**
 A training technique that uses human preferences and feedback to improve AI model behavior and alignment with human values.
+
+### **Graph-Based Reasoning**
+A reasoning approach where AI agents use graph structures to represent relationships between entities, concepts, or tasks, enabling complex relational reasoning and knowledge traversal.
+
+### **Workflow Orchestration**
+The automated coordination and management of complex multi-step processes involving multiple agents, tools, and decision points to achieve specific business or technical objectives.
+
+### **Agent Graph**
+A network representation of agents and their relationships, connections, and communication pathways, used for visualizing and managing complex multi-agent systems.
+
+### **Hierarchical Agent Architecture**
+A structured approach where agents are organized in layers or levels, with higher-level agents coordinating and directing lower-level agents to accomplish complex tasks.
+
+### **Agent Marketplace**
+A platform or ecosystem where different AI agents can be discovered, shared, and integrated, allowing users to find and utilize specialized agents from various providers.
 
 ---
 
@@ -398,6 +425,30 @@ Controls that restrict the number of requests a user or system can make to an AI
 ### **Batch Processing**
 The execution of multiple AI tasks together as a group, often more efficient for large-scale operations.
 
+### **Cross-Platform Integration**
+The ability to connect and coordinate agents across different platforms, frameworks, and implementations using standardized protocols and interfaces.
+
+### **Agent Discovery**
+The process by which agents can automatically find and identify other available agents in a network or ecosystem, enabling dynamic collaboration and resource utilization.
+
+### **Dynamic Task Distribution**
+The automatic allocation and reassignment of tasks among agents based on their current capabilities, availability, and workload, optimizing system performance and efficiency.
+
+### **Collective Intelligence**
+The enhanced cognitive capabilities that emerge when multiple agents work together, combining their individual knowledge and processing power to solve complex problems.
+
+### **Self-Organizing Systems**
+Agent networks that can automatically structure themselves, form connections, and adapt their organization without central control or predetermined hierarchies.
+
+### **Tool Selection Guidance**
+Mechanisms that help orchestrator agents determine which specialized tools or agents to use for specific tasks based on context, requirements, and performance criteria.
+
+### **Agent Handoff**
+The process of transferring control or responsibility for a task from one agent to another, typically when different expertise or capabilities are needed to continue the work.
+
+### **Modular Architecture**
+A design approach where agents and their components can be independently developed, deployed, and modified without affecting the entire system.
+
 ---
 
 ## Quick Reference
@@ -410,6 +461,13 @@ The execution of multiple AI tasks together as a group, often more efficient for
 | ReAct | Framework | Intermediate | Reasoning and acting combined |
 | Bedrock | AWS Service | Beginner | Foundation model access |
 | MCP | Protocol | Advanced | Agent-tool integration |
+| Agent-to-Agent (A2A) | Protocol | Advanced | Inter-agent communication |
+| Agents as Tools | Architecture | Intermediate | Hierarchical agent coordination |
+| Swarm Intelligence | Core | Advanced | Collaborative agent orchestration |
+| Agent Swarm | Core | Advanced | Self-organizing agent teams |
+| Workflow Orchestration | Integration | Intermediate | Multi-step process automation |
+| Graph-Based Reasoning | Model | Advanced | Relational knowledge processing |
+| Agent Marketplace | Business | Intermediate | Agent discovery and sharing |
 | IAM | Security | Intermediate | Access control |
 | Observability | Monitoring | Advanced | System health tracking |
 | AI Governance | Business | Intermediate | Responsible AI implementation |
