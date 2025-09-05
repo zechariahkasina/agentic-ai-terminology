@@ -602,7 +602,7 @@
 
         <div class="navigation">
             <h3 class="nav-title">Explore More Resources</h3>
-            <div class="nav-links">
+            <div class="nav-links">                
                 <a href="diagrams/ai-agent-architecture.html" class="nav-link">🏗️ Agent Architecture</a>
                 <a href="diagrams/learning-path-chart.html" class="nav-link">📚 Learning Path</a>
                 <a href="diagrams/aws-ai-ecosystem.html" class="nav-link">☁️ AWS Ecosystem</a>
@@ -711,8 +711,179 @@
                 icon: "🗄️",
                 complexity: "intermediate",
                 description: "A specialized database designed to store and query high-dimensional vectors, commonly used for semantic search and RAG implementations.",
-                useCase: "Semantic search and similarity",
+                useCase: "Semantic search and similarity matching",
                 examples: "Pinecone, Weaviate, Chroma, FAISS"
+            },
+            {
+                title: "Tool Calling",
+                category: "core",
+                icon: "🔧",
+                complexity: "intermediate",
+                description: "The ability of an AI agent to invoke external functions, APIs, or services to gather information or perform actions beyond its base capabilities.",
+                useCase: "Extending agent capabilities",
+                examples: "API calls, database queries, file operations"
+            },
+            {
+                title: "Prompt Engineering",
+                category: "model",
+                icon: "✏️",
+                complexity: "beginner",
+                description: "The practice of crafting effective input prompts to guide AI models toward desired outputs and behaviors.",
+                useCase: "Optimizing AI model responses",
+                examples: "Few-shot prompting, chain-of-thought, role-based prompts"
+            },
+            {
+                title: "Foundation Model",
+                category: "model",
+                icon: "🏢",
+                complexity: "intermediate",
+                description: "Pre-trained AI models that serve as a base for various applications. These models are trained on broad datasets and can be fine-tuned for specific tasks.",
+                useCase: "Base for specialized AI applications",
+                examples: "GPT-4, Claude, LLaMA, BERT"
+            },
+            {
+                title: "Amazon Bedrock AgentCore",
+                category: "aws",
+                icon: "🚀",
+                complexity: "intermediate",
+                description: "A serverless runtime environment specifically designed for deploying and running AI agents with built-in security, scaling, and observability.",
+                useCase: "Agent deployment and management",
+                examples: "Production agent hosting, auto-scaling, monitoring"
+            },
+            {
+                title: "LangChain",
+                category: "model",
+                icon: "🔗",
+                complexity: "intermediate",
+                description: "A framework for developing applications powered by language models, providing tools for chaining together different AI components.",
+                useCase: "Building LLM applications",
+                examples: "Document Q&A, chatbots, workflow automation"
+            },
+            {
+                title: "CrewAI",
+                category: "model",
+                icon: "👨‍💼",
+                complexity: "intermediate",
+                description: "A framework for orchestrating role-playing, autonomous AI agents that work together as a crew to tackle complex tasks.",
+                useCase: "Multi-agent collaboration",
+                examples: "Research teams, content creation, business process automation"
+            },
+            {
+                title: "Model Context Protocol (MCP)",
+                category: "advanced",
+                icon: "🔌",
+                complexity: "advanced",
+                description: "A standardized protocol that enables AI agents to securely connect to and interact with various data sources and tools.",
+                useCase: "Agent-tool integration",
+                examples: "Database connections, API integrations, file system access"
+            },
+            {
+                title: "Hallucination",
+                category: "advanced",
+                icon: "🌫️",
+                complexity: "intermediate",
+                description: "When an AI model generates information that appears plausible but is factually incorrect or not based on its training data.",
+                useCase: "AI reliability and validation",
+                examples: "False facts, made-up citations, incorrect calculations"
+            },
+            {
+                title: "Prompt Injection",
+                category: "security",
+                icon: "⚠️",
+                complexity: "advanced",
+                description: "A security vulnerability where malicious input is crafted to manipulate an AI model's behavior or extract sensitive information.",
+                useCase: "AI security and safety",
+                examples: "Jailbreaking, data extraction, behavior manipulation"
+            },
+            {
+                title: "Zero Trust Architecture",
+                category: "security",
+                icon: "🛡️",
+                complexity: "advanced",
+                description: "A security model that requires verification for every user and device trying to access resources, regardless of their location.",
+                useCase: "Enterprise security framework",
+                examples: "Identity verification, access controls, continuous monitoring"
+            },
+            {
+                title: "Observability",
+                category: "business",
+                icon: "👁️",
+                complexity: "intermediate",
+                description: "The ability to understand the internal state of a system based on its external outputs, including logs, metrics, and traces.",
+                useCase: "System monitoring and debugging",
+                examples: "Performance tracking, error detection, usage analytics"
+            },
+            {
+                title: "AI Governance",
+                category: "business",
+                icon: "⚖️",
+                complexity: "intermediate",
+                description: "The framework of policies, procedures, and controls that ensure responsible development and deployment of AI systems.",
+                useCase: "Responsible AI implementation",
+                examples: "Ethics policies, compliance frameworks, risk management"
+            },
+            {
+                title: "Human-in-the-Loop (HITL)",
+                category: "business",
+                icon: "🤝",
+                complexity: "intermediate",
+                description: "A model where humans are involved in the AI decision-making process, providing oversight, validation, or intervention when needed.",
+                useCase: "Human oversight and validation",
+                examples: "Content moderation, quality assurance, decision approval"
+            },
+            {
+                title: "Constitutional AI",
+                category: "advanced",
+                icon: "📜",
+                complexity: "advanced",
+                description: "An approach to training AI systems using a set of principles or 'constitution' to guide behavior, making them more helpful, harmless, and honest.",
+                useCase: "Ethical AI behavior",
+                examples: "Value alignment, safety constraints, behavioral guidelines"
+            },
+            {
+                title: "Fine-Tuning",
+                category: "model",
+                icon: "🎛️",
+                complexity: "intermediate",
+                description: "The process of further training a pre-trained model on specific data to improve performance for particular tasks or domains.",
+                useCase: "Model specialization",
+                examples: "Domain adaptation, task-specific optimization, custom behaviors"
+            },
+            {
+                title: "Embeddings",
+                category: "model",
+                icon: "🧮",
+                complexity: "intermediate",
+                description: "Numerical representations of text, images, or other data that capture semantic meaning and enable similarity comparisons.",
+                useCase: "Semantic understanding and search",
+                examples: "Word2Vec, BERT embeddings, image embeddings"
+            },
+            {
+                title: "Serverless",
+                category: "development",
+                icon: "☁️",
+                complexity: "beginner",
+                description: "A cloud computing model where the cloud provider manages the infrastructure, allowing developers to focus on code without managing servers.",
+                useCase: "Scalable application deployment",
+                examples: "AWS Lambda, Azure Functions, Google Cloud Functions"
+            },
+            {
+                title: "MLOps",
+                category: "development",
+                icon: "🔄",
+                complexity: "intermediate",
+                description: "Practices that combine machine learning, DevOps, and data engineering to deploy and maintain ML systems in production reliably and efficiently.",
+                useCase: "ML lifecycle management",
+                examples: "Model versioning, automated testing, continuous deployment"
+            },
+            {
+                title: "Multi-Modal AI",
+                category: "advanced",
+                icon: "🎭",
+                complexity: "advanced",
+                description: "AI systems that can process and generate multiple types of data including text, images, audio, and video.",
+                useCase: "Cross-modal understanding",
+                examples: "GPT-4V, DALL-E, Flamingo, CLIP"
             },
             {
                 title: "Prompt Engineering",
