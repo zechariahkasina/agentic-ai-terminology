@@ -1,6 +1,6 @@
 # Agentic AI Terminology Guide: Essential Concepts and Terms
 
-## Access the latest interactive version online: [https://zechariahks.github.io/agentic-ai-terminology/](https://zechariahks.github.io/agentic-ai-terminology/)
+## Access the latest interactive version online: [https://zechariahks.github.io/agentic-ai-terminology/](https://zechariahkasina.github.io/agentic-ai-terminology/)
 
 Are you feeling overwhelmed by the rapidly evolving vocabulary in the AI world? You're not alone. The field of Agentic AI is advancing at breakneck speed, introducing new concepts, frameworks, and terminologies almost daily. Whether you're a curious beginner trying to understand what an "AI agent" actually does, a developer diving into your first agent implementation, or an enterprise leader evaluating AI solutions for your organization, this comprehensive guide will be your compass through the complex landscape of AI terminology.
 
